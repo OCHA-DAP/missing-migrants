@@ -203,7 +203,7 @@ function initMap(geom){
         .attr('class', 'label')
         .style('font-size', function (d) { return Math.round(labellog(mapzoom.scale())); })
         .attr("transform", function(d) {
-          return "translate(" + projection([(d.coordinates)[0], (d.coordinates)[1]]) + ")";
+            return "translate(" + projection([(d.coordinates)[0], (d.coordinates)[1]]) + ")";
         })
         .text(function(d){ return d.name + ': ' + formatNumber(d.total); });
 
@@ -334,7 +334,7 @@ function updateMap(data){
         .attr('class', 'label')
         .style('font-size', function (d) { return Math.round(labellog(mapzoom.scale())); })
         .attr("transform", function(d) {
-          return "translate(" + projection([(d.coordinates)[0], (d.coordinates)[1]]) + ")";
+            return "translate(" + projection([(d.coordinates)[0], (d.coordinates)[1]]) + ")";
         })
         .text(function(d){ return d.name + ': ' + formatNumber(d.total); });
 
@@ -500,7 +500,6 @@ function resetAnimation(restart){
 var colors = ['#ccc','#ffffb2','#fecc5c','#fd8d3c','#e31a1c'];
 var color = '#1f77b4';
 var dataurl = 'https://missingmigrants.iom.int/global-figures/2017/HDXjson';
-//'data/HDX.json';
 var geomurl = 'data/worldmap.json';
 var regionsurl = 'data/regions.json';
 var formatDate = d3.time.format('%m/%d/%Y');
